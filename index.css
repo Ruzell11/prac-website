@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --header:'Tai Heritage Pro', serif;;
+    --nav:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.bg-img{
+   background-position: cover;
+   max-height: 100vh;
+    width: 100%;
+    z-index: -50;
+    opacity: .9;
+    filter: brightness(50%);
+}
+.navbar{
+    border-bottom: 3px solid #f6b256;
+}
+.navbar h3{
+    cursor: pointer;
+    color: orange;
+    font-family: var(--header);
+}
+.nav-item{
+    list-style: none;
+}
+.nav-item li{
+    font-family:var(--nav);
+    color: #f6b256;
+    font-weight: 500;
+}
+.nav-item li:hover{
+    color: orange
+}
+.toggleButton{
+    color: #f6b256;
+    cursor: pointer;
+    display:none ;
+    top: 25px;
+    font-size: 1.5rem;
+   right: 16px; 
+}
+@media screen and (max-width:768px) {
+    .navbar{
+        display: flex;
+        border-bottom: none;
+        align-items: flex-start !important; 
+        text-align: center;
+    }
+    .nav-item{
+        display: none !important;
+        height: 30%;
+        font-size: 1.5rem;
+        background: rgba(0, 0, 0, 0.7);
+        padding-left: 0;
+    }
+    .nav-item li{
+        color: #f6b256 !important;
+        margin: 10px;
+        width: 100% !important;
+    }
+    .nav-item a{
+        width: 100% ;
+        
+    }
+    .nav-item a:hover{
+        background-color: black;
+      
+        
+    }
+    
+    .toggleButton{
+       display: flex;
+    }
+    .navbar .nav-item{
+        width: 100%;
+        flex-direction: column;
+    }
+    .nav-item.active{
+        display: flex !important;
+    }
+}
